@@ -1,0 +1,11 @@
+Model Information:
+* title:	Coffee Paper Bag 3D Scan
+* source:	https://sketchfab.com/3d-models/coffee-paper-bag-3d-scan-4873908248a04f7b9af32a58a1918a28
+* author:	grafi (https://sketchfab.com/zdenkoroman)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Coffee Paper Bag 3D Scan" (https://sketchfab.com/3d-models/coffee-paper-bag-3d-scan-4873908248a04f7b9af32a58a1918a28) by grafi (https://sketchfab.com/zdenkoroman) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
