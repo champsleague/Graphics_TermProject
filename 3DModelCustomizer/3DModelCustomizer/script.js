@@ -5,8 +5,8 @@ const DRAG_NOTICE = document.getElementById('js-drag-notice');
 
 var theModel;
 
-// const MODEL_PATH = "./single_bed_4/scene.gltf";
-const MODEL_PATH = "./custom_full_carbon_fibre_road_bike/scene.gltf";
+const MODEL_PATH = "./single_bed_4/scene.gltf";
+// const MODEL_PATH = "./custom_full_carbon_fibre_road_bike/scene.gltf";
 // const MODEL_PATH = "chair.glb";
 
 var activeOption = 'legs';
@@ -240,7 +240,7 @@ loader.load(MODEL_PATH, function (gltf) {
   });
 
   // Set the models initial scale   
-  theModel.scale.set(0.3, 0.3, 0.3);
+  theModel.scale.set(0.2, 0.2, 0.2);
   theModel.rotation.y = Math.PI;
 
   // Offset the y position a bit
