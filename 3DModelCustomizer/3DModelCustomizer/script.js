@@ -5,7 +5,7 @@ const DRAG_NOTICE = document.getElementById('js-drag-notice');
 
 var theModel;
 
-const MODEL_PATH = "chair.glb";
+const MODEL_PATH = "./single_bed_4/scene.gltf";
 
 var activeOption = 'legs';
 var loaded = false;

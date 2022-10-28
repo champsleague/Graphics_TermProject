@@ -1,0 +1,11 @@
+Model Information:
+* title:	Single Bed 4
+* source:	https://sketchfab.com/3d-models/single-bed-4-45aadaaac37f447cb18bb242e1a5743b
+* author:	rhcreations (https://sketchfab.com/rhcreations)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Single Bed 4" (https://sketchfab.com/3d-models/single-bed-4-45aadaaac37f447cb18bb242e1a5743b) by rhcreations (https://sketchfab.com/rhcreations) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
