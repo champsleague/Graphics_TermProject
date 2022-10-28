@@ -2,7 +2,7 @@
   
 ### 3D Model Products Customizer Program
 
-### DIY - Design It Yourself  
+## DIY - Design It Yourself  
 
 
 ### Objective 
