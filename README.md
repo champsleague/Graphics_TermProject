@@ -16,6 +16,7 @@
 
 ### Brief Description
 * Design - The user can easily change materials and their design with simple movements
-* Perspective from various angles - The user can see the object from various angles by applying various effects such as a light source
+* Perspective from various angles   
+- The user can see the object from various angles by applying various effects such as a light source
 
 
