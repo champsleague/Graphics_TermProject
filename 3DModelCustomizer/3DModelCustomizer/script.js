@@ -5,9 +5,11 @@ const DRAG_NOTICE = document.getElementById('js-drag-notice');
 
 var theModel;
 
-const MODEL_PATH = "./single_bed_4/scene.gltf";
-// const MODEL_PATH = "./custom_full_carbon_fibre_road_bike/scene.gltf";
+// const MODEL_PATH = "./model_bed/scene.gltf";
+const MODEL_PATH = "./model_bike/scene.gltf";
 // const MODEL_PATH = "chair.glb";
+// const MODEL_PATH = "./apple_iphone_13_pro_max/scene.gltf";
+
 
 var activeOption = 'legs';
 var loaded = false;
