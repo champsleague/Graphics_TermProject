@@ -1,6 +1,6 @@
 # Graphics-Term-Project
   
-### 3D Model Products Customizer Program
+## 3D Model Products Customizer Program
 
 ## DIY - Design It Yourself  
 
