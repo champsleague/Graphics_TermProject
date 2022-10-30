@@ -36,7 +36,8 @@
 -----------------------------------------------------------
 ### Select Object  
 * select objects by using gITF
-* take the image of the object you want and design it yourself
+* take the image of the object you want and design it yourself  
+
 ![20221031_003355](https://user-images.githubusercontent.com/94350277/198887379-a00c5b2b-34e9-4977-93b5-5dd10ba5194b.png)
 
 
