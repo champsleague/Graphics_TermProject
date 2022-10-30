@@ -20,6 +20,7 @@
 
 
 ### Key Feature
-*
-*
-*
+* Select Object
+* Customize function
+* Dynamic Effects
+
