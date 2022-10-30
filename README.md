@@ -34,4 +34,9 @@
   * You can see and check the results from various perspectives in real time
 
 -----------------------------------------------------------
+Select Object  
+* select objects by using gITF
+* take the image of the object you want and design it yourself
+* 
+
 
