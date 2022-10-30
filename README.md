@@ -1,4 +1,28 @@
 # Graphics-Term-Project
-Computer Graphics Term project  
   
-3D Model Products Customizer Program
+## 3D Model Products Customizer Program
+
+### DIY - Design It Yourself  
+  
+    
+  
+    
+      
+      
+### Objective 
+* Design various objects easily by yourself.
+* With this project, you can make the design you want fast and simple.  
+
+
+### Brief Description
+* Design - The user can easily change materials and their design with simple movements
+* Perspectives from various angles - The user can see the object from various angles by applying various effects such as a light source
+
+
+### Key Feature
+* Select Object
+  * You can choose the object you want, such as the shape of a cylinder or box
+  * You can also use the object you have (e.g. glTF)
+* Customize function
+* Dynamic Effects
+
