@@ -22,10 +22,12 @@
 ### Key Feature
 * Select Object
   * You can choose the object you want, such as the shape of a cylinder or box
-  * You can also use the object you have (e.g. glTF)
+  * You can also use the object you have (e.g. glTF)  
+
 * Customize function
   * You can design its surface using drawing tools or image insertion
   * You can easily design with just a click and drag & drop
-  * You can also enter the required values directly for more precise operations
+  * You can also enter the required values directly for more precise operations  
+ 
 * Dynamic Effects
 
