@@ -21,6 +21,7 @@
 
 ### Key Feature
 * Select Object
+  * You can choose the object you want, such as the shape of a cylinder or box
 * Customize function
 * Dynamic Effects
 
