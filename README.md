@@ -30,4 +30,8 @@
   * You can also enter the required values directly for more precise operations  
  
 * Dynamic Effects
+  * You can see the results in the desired environment by applying various light source effects
+  * You can see and check the results from various perspectives in real time
+
+
 
