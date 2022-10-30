@@ -22,6 +22,7 @@
 ### Key Feature
 * Select Object
   * You can choose the object you want, such as the shape of a cylinder or box
+  * You can also use the object you have (e.g. glTF)
 * Customize function
 * Dynamic Effects
 
