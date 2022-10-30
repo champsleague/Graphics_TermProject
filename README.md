@@ -25,5 +25,7 @@
   * You can also use the object you have (e.g. glTF)
 * Customize function
   * You can design its surface using drawing tools or image insertion
+  * You can easily design with just a click and drag & drop
+  * You can also enter the required values directly for more precise operations
 * Dynamic Effects
 
