@@ -49,4 +49,8 @@
 ![20221031_230931](https://user-images.githubusercontent.com/94350277/199027802-bf385ed0-7b5f-4fd8-83e5-be90703b6f51.png)
 
 ### Dynamic Effects
+* ThreeJS graphics library is used for rendering 3D graphics in web browser
+* expect various light source effects from various angles through the ThreeJS library
+* expect that these effects will enable us to provide users with information from various visible aspects
+
 
