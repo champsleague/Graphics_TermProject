@@ -55,4 +55,7 @@
 
 ![20221101_000433](https://user-images.githubusercontent.com/94350277/199040394-c988856d-c5ab-4c78-b789-a2f257ce9b9c.png)
 
-
+### Textures
+* Apply textures (colors or shapes) to the product which user wants
+* Available to try various kinds of textures to the products
+* User can check the visual image of the products before purchasing the products
