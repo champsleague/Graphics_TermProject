@@ -52,5 +52,6 @@
 * ThreeJS graphics library is used for rendering 3D graphics in web browser
 * expect various light source effects from various angles through the ThreeJS library
 * expect that these effects will enable us to provide users with information from various visible aspects
+![20221101_000433](https://user-images.githubusercontent.com/94350277/199040394-c988856d-c5ab-4c78-b789-a2f257ce9b9c.png)
 
 
