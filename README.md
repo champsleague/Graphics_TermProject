@@ -58,4 +58,6 @@
 ### Textures
 * Apply textures (colors or shapes) to the product which user wants
 * Available to try various kinds of textures to the products
-* User can check the visual image of the products before purchasing the products
+* User can check the visual image of the products before purchasing the products  
+
+
