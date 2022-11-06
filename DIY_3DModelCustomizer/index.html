@@ -1,7 +1,15 @@
 <!DOCTYPE html>
+<html lang="en" class="no-js">
+
 <head>
     <meta charset="UTF-8" />
-    <title>DIY - Design It Yourself</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D Model Color Customizer App | Codrops</title>
+    <meta name="description" content="Demo for the tutorial on how to build a 3d model color customizer app with Three.js." />
+    <meta name="keywords" content="three.js, color customizer, app, tutorial, 3d model, blender, javascript" />
+    <meta name="author" content="Kyle Wetton for Codrops" />
+    <link rel="shortcut icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Raleway:500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <!-- We add the loader CSS here so that assets don't pop in before the bundled CSS is loaded -->
@@ -56,6 +64,10 @@
 </head>
 
 <body>
+    <div class="frame">
+		<h1 class="frame__title" >3D Producuts Customizer Program</h1>
+	</div>
+    
     <!-- The loading element overlays all else until the model is loaded, at which point we remove this element from the DOM -->
     <div class="loading" id="js-loader">
         <div class="loader"></div>
@@ -66,29 +78,10 @@
     <div id="js-option-tray" class="options"></div>
 
     <div class="customizer_window">
-        <button id="Next_Btn">Next</button>
-        <div id="Setting_area_Light">
-            <h1>Light Setting</h1>
-            <select id="light_list" size="4" style="overflow: hidden">
-                <option selected>Ambient Light</option>
-                <option>Directional Light</option>
-                <option>Hemisphere Light</option>
-                <option>Point Light</option>
-            </select><br>
-            <input type="checkbox" id="light_enable">Enable<br>
-            <div id="Setting_area_Light_Position" style="display:none">
-                <h2>Position</h2>
-                X -50 <input id="slider_X" type="range" min="-50" max="50" value="0"/> 50<br>
-                Y -50 <input id="slider_Y" type="range" min="-50" max="50" value="0"/> 50<br>
-                Z -50 <input id="slider_Z" type="range" min="-50" max="50" value="0"/> 50<br>
-            </div>
-            <h2>Misc</h2>
-            Color: <input type="color" id="light_color" value="#ffffff"><br>
-            Intensity: -1 <input id="light_intensity" type="range" min="-1" max="1" step="0.005" value="1"/> 1
-        </div>
-        <div id="Setting_area_View" style="display:none">
-            <h1>View Setting</h1>
-        </div>
+        <h1>Light Setting</h1>
+        <h2>Position</h2><br>
+        test<br>
+        <h1>View Setting</h1>
     </div>
     <!-- The canvas element is used to draw the 3D scene -->
     <canvas id="c"></canvas>
@@ -117,5 +110,6 @@
     <script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
     <script src="script.js"></script>
 </body>
+
 
 </html>

@@ -21,6 +21,17 @@ html {
     touch-action: manipulation;
 }
 
+.frame{
+    text-align:center;
+    background-color: bisque;
+    height:50px;
+  }
+
+.frame__title {
+    font-size: 1.7rem;
+    display: inline-block;
+}
+
 *,
 *::before,
 *::after {
