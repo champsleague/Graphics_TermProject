@@ -12,54 +12,43 @@ const INITIAL_MTL = new THREE.MeshPhongMaterial({ color: 0xf1f1f1, shininess: 10
 
 var theModel;
 var activeOption;
-var loaded = false;
 var options;
+var loaded = false;
+var currentSettingArea = 0;
+
+var lights = [new THREE.AmbientLight(), new THREE.DirectionalLight(0xffffff, 0.54), new THREE.HemisphereLight(0xffffff, 0xffffff, 0.61), new THREE.PointLight()];
+var lightEnabled = [false, true, true, false];
 
 const MODELS = [
 {
   path: 'models/chair.glb',
   thumb: 'models/chair.jpg',
-  map: [{ childID: "legs", mtl: INITIAL_MTL, thumb: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/legs.svg' },
-    { childID: "cushions", mtl: INITIAL_MTL, thumb: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/cushions.svg' },
-    { childID: "base", mtl: INITIAL_MTL, thumb: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/base.svg' },
-    { childID: "supports", mtl: INITIAL_MTL, thumb: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/supports.svg' },
-    { childID: "back", mtl: INITIAL_MTL, thumb: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/back.svg' }]},
+  map: [{ childID: "legs", mtl: INITIAL_MTL, thumb: 'img/thumb/legs.svg' },
+    { childID: "cushions", mtl: INITIAL_MTL, thumb: 'img/thumb/cushions.svg' },
+    { childID: "base", mtl: INITIAL_MTL, thumb: 'img/thumb/base.svg' },
+    { childID: "supports", mtl: INITIAL_MTL, thumb: 'img/thumb/supports.svg' },
+    { childID: "back", mtl: INITIAL_MTL, thumb: 'img/thumb/back.svg' }]},
 
 {
   path: 'models/bicycle.glb',
   thumb: 'models/bicycle.jpg',
   map: [
   { childID: "bicycle_body_main_0", mtl: INITIAL_MTL, thumb: 'img/thumb/bicycle_body_main_0.png' },
-
   { childID: "bicycle_body_forward_0", mtl: INITIAL_MTL, thumb: 'img/thumb/bicycle_body_forward_0.png' },
-
   { childID: "bicycle_cover_forward_0", mtl: INITIAL_MTL, thumb: 'img/thumb/bicycle_cover_forward_0.png' },
-
   { childID: "bicycle_cover_back_0", mtl: INITIAL_MTL, thumb: 'img/thumb/bicycle_cover_back_0.png' },
-
   { childID: "bicycle_seat_0", mtl: INITIAL_MTL, thumb: 'img/thumb/bicycle_seat_0.png' }]},
 
-  {
-    path: 'models/bed.gltf',
-    thumb: 'models/bed.jpg',
-    scale: [0.3, 0.3, 0.3],
-    map: [
-      { childID: "Object_4", mtl: INITIAL_MTL, thumb: 'img/thumb/bed_frame.png' },
-      { childID: "Object_6", mtl: INITIAL_MTL, thumb: 'img/thumb/bed_cover.png'  },
-      { childID: "Object_8", mtl: INITIAL_MTL, thumb: 'img/thumb/bed_pillow.png'  },
-      { childID: "Object_10", mtl: INITIAL_MTL, thumb: 'img/thumb/bed_upper_pillow.png'  },
-      { childID: "Object_12", mtl: INITIAL_MTL, thumb: 'img/thumb/bed_lower_pillow.png'  }]},
-
 {
-  path: 'models/chair2.glb',
-  thumb: 'models/chair2.jpg',
-  scale: [2, 2, 2],
+  path: 'models/bed.gltf',
+  thumb: 'models/bed.jpg',
+  scale: [0.3, 0.3, 0.3],
   map: [
-  { childID: "back", mtl: INITIAL_MTL, thumb: 'img/thumb/chair2_back.png' },
-  { childID: "base", mtl: INITIAL_MTL, thumb: 'img/thumb/chair2_base.png' },
-  { childID: "cushions", mtl: INITIAL_MTL, thumb: 'img/thumb/chair2_cushion.png' },
-  { childID: "supports", mtl: INITIAL_MTL, thumb: 'img/thumb/chair2_supports.png' }
-]}];
+    { childID: "Object_4", mtl: INITIAL_MTL, thumb: 'img/thumb/bed_frame.png' },
+    { childID: "Object_6", mtl: INITIAL_MTL, thumb: 'img/thumb/bed_cover.png'  },
+    { childID: "Object_8", mtl: INITIAL_MTL, thumb: 'img/thumb/bed_pillow.png'  },
+    { childID: "Object_10", mtl: INITIAL_MTL, thumb: 'img/thumb/bed_upper_pillow.png'  },
+    { childID: "Object_12", mtl: INITIAL_MTL, thumb: 'img/thumb/bed_lower_pillow.png'  }]}];
 
 const colors = [
   {
@@ -305,13 +294,11 @@ const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.shadowMap.enabled = true;
 renderer.setPixelRatio(window.devicePixelRatio);
 
-var cameraFar = 5;
-
 document.body.appendChild(renderer.domElement);
 
 // Add a camerra
 var camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = cameraFar;
+camera.position.z = 5; // cameraFar
 camera.position.x = 0;
 
 
@@ -373,17 +360,15 @@ function initColor(parent, type, mtl) {
 }
 
 // Add lights
-var hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.61);
-hemiLight.position.set(0, 50, 0);
+lights[2].position.set(0, 50, 0);
 // Add hemisphere light to scene   
-scene.add(hemiLight);
+scene.add(lights[2]);
 
-var dirLight = new THREE.DirectionalLight(0xffffff, 0.54);
-dirLight.position.set(-8, 12, 8);
-dirLight.castShadow = true;
-dirLight.shadow.mapSize = new THREE.Vector2(1024, 1024);
+lights[1].position.set(-8, 12, 8);
+lights[1].castShadow = true;
+lights[1].shadow.mapSize = new THREE.Vector2(1024, 1024);
 // Add directional Light to scene    
-scene.add(dirLight);
+scene.add(lights[1]);
 
 // Floor
 var floorGeometry = new THREE.PlaneGeometry(5000, 5000, 1, 1);
@@ -657,3 +642,89 @@ function slide(wrapper, items) {
 }
 
 slide(slider, sliderItems);
+
+document.getElementById("Next_Btn").onclick = function() {
+  if (!currentSettingArea) { // View Setting
+    document.getElementById('Setting_area_Light').style.display = "none";
+    document.getElementById('Setting_area_View').style.display = "block";
+  }
+  else { // Light Setting
+    document.getElementById('Setting_area_Light').style.display = "block";
+    document.getElementById('Setting_area_View').style.display = "none";
+  }
+
+  currentSettingArea = !currentSettingArea;
+};
+
+var lightList = document.getElementById('light_list');
+document.getElementById("light_list").onclick = function(e) {
+  if (lightList.options[lightList.selectedIndex]) { // check if light is selected
+    if (lightEnabled[lightList.selectedIndex]) // apply checkbox status from selected light
+      document.getElementById("light_enable").checked = true;
+    else
+      document.getElementById("light_enable").checked = false;
+
+    // apply color and intensity input from selected light
+    document.getElementById("light_color").value = '#' + ('00'+(lights[lightList.selectedIndex].color.r*255).toString(16)).slice(-2) + ('00'+(lights[lightList.selectedIndex].color.g*255).toString(16)).slice(-2) + ('00'+(lights[lightList.selectedIndex].color.b*255).toString(16)).slice(-2);
+    document.getElementById("light_intensity").value = lights[lightList.selectedIndex].intensity;
+
+    if (lights[lightList.selectedIndex].type == 'AmbientLight')
+      document.getElementById('Setting_area_Light_Position').style.display = "none"; // hide unsupported options
+    else {
+      document.getElementById("slider_X").value = lights[lightList.selectedIndex].position.x;
+      document.getElementById("slider_Y").value = lights[lightList.selectedIndex].position.y;
+      document.getElementById("slider_Z").value = lights[lightList.selectedIndex].position.z;
+      document.getElementById('Setting_area_Light_Position').style.display = "block"; // show supported options
+    }
+  }
+};
+
+document.getElementById("light_enable").onclick = function(e) {
+  if (lightList.options[lightList.selectedIndex]) {
+    if (document.getElementById("light_enable").checked == true) {
+      scene.add(lights[lightList.selectedIndex]);
+      lightEnabled[lightList.selectedIndex] = true;
+    }
+    else {
+      scene.remove(lights[lightList.selectedIndex]);
+      lightEnabled[lightList.selectedIndex] = false;
+    }
+  }
+};
+
+document.getElementById("slider_X").onchange = function(event) {
+  lights[lightList.selectedIndex].position.x = event.target.value;
+};
+document.getElementById("slider_Y").onchange = function(event) {
+  lights[lightList.selectedIndex].position.y = event.target.value;
+};
+document.getElementById("slider_Z").onchange = function(event) {
+  lights[lightList.selectedIndex].position.z = event.target.value;
+};
+document.getElementById("light_color").onchange = function(event) {
+  lights[lightList.selectedIndex].color.r = parseInt(event.target.value.substr(1, 2), 16)/255;
+  lights[lightList.selectedIndex].color.g = parseInt(event.target.value.substr(3, 2), 16)/255;
+  lights[lightList.selectedIndex].color.b = parseInt(event.target.value.substr(5, 2), 16)/255;
+};
+document.getElementById("light_intensity").onchange = function(event) {
+  lights[lightList.selectedIndex].intensity = event.target.value;
+};
+
+document.getElementById("view_X").value = camera.position.x;
+document.getElementById("view_Y").value = camera.position.y;
+document.getElementById("view_Z").value = camera.position.z;
+document.getElementById("c").oncontextmenu = function(e) {
+  console.log(e.pageX, e.pageY);
+  document.getElementById("view_X").value = camera.position.x;
+  document.getElementById("view_Y").value = camera.position.y;
+  document.getElementById("view_Z").value = camera.position.z;
+}
+document.getElementById("view_X").onchange = function(event) {
+  camera.position.x = event.target.value;
+};
+document.getElementById("view_Y").onchange = function(event) {
+  camera.position.y = event.target.value;
+};
+document.getElementById("view_Z").onchange = function(event) {
+  camera.position.z = event.target.value;
+};
