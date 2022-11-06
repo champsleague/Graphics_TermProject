@@ -60,4 +60,10 @@
 * Available to try various kinds of textures to the products
 * User can check the visual image of the products before purchasing the products  
 
+### Light Source Effects
+* Users can check the bright and darkness of the product based on various light source effects
+* Users can directly control the degree of the light source effect
+* Ambient light, Directional light, Hemisphere light, Point light options are available  
+
+![image](https://user-images.githubusercontent.com/94350277/200155982-6281c079-17ac-4418-bf8f-3d16ffe662f0.png)
 
