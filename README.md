@@ -65,5 +65,5 @@
 * Users can directly control the degree of the light source effect
 * Ambient light, Directional light, Hemisphere light, Point light options are available  
 
-![image](img src = "https://user-images.githubusercontent.com/94350277/200155996-43c23bcf-28a4-4eb0-b27b-bbb76f683686.png" width="40%" height="40%")
+![image](https://user-images.githubusercontent.com/94350277/200155996-43c23bcf-28a4-4eb0-b27b-bbb76f683686.png)
 
