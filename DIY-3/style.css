@@ -28,7 +28,7 @@ html {
   }
 
 .frame__title {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     display: inline-block;
 }
 
@@ -50,10 +50,10 @@ html {
     width: 100%;
 }
 
-.frame__title {
+/* .frame__title {
     font-size: 1rem;
     display: inline-block;
-}
+} */
 
 .frame__links {
     display: inline-block;
