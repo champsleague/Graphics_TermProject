@@ -38,7 +38,7 @@
 * select objects by using gITF
 * take the image of the object you want and design it yourself  
 
-![20221031_003553](https://user-images.githubusercontent.com/94350277/198887472-3374a369-0e04-443b-8c89-5d029b5818fa.png)
+![image](https://user-images.githubusercontent.com/94350277/200155820-a7b21b6d-3cfd-46ea-83f5-625d4cc354c9.png)
 
 ### Customize function
 * implement a technology that directly selects and applies the desired structure to the desired object
