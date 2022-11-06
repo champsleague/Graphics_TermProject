@@ -38,7 +38,7 @@
 * select objects by using gITF
 * take the image of the object you want and design it yourself  
 
-![20221031_003553](https://user-images.githubusercontent.com/94350277/198887472-3374a369-0e04-443b-8c89-5d029b5818fa.png)
+![image](https://user-images.githubusercontent.com/94350277/200155820-a7b21b6d-3cfd-46ea-83f5-625d4cc354c9.png)
 
 ### Customize function
 * implement a technology that directly selects and applies the desired structure to the desired object
@@ -53,11 +53,16 @@
 * expect various light source effects from various angles through the ThreeJS library
 * expect that these effects will enable us to provide users with information from various visible aspects
 
-![20221101_000433](https://user-images.githubusercontent.com/94350277/199040394-c988856d-c5ab-4c78-b789-a2f257ce9b9c.png)
+![image](https://user-images.githubusercontent.com/94350277/200155875-f1ca589d-7a25-4b15-8fbd-05d5b2a30d63.png)
 
 ### Textures
 * Apply textures (colors or shapes) to the product which user wants
 * Available to try various kinds of textures to the products
 * User can check the visual image of the products before purchasing the products  
 
+### Light Source Effects
+* Users can check the bright and darkness of the product based on various light source effects
+* Users can directly control the degree of the light source effect
+* Ambient light, Directional light, Hemisphere light, Point light options are available  
 
+![image](https://user-images.githubusercontent.com/94350277/200156137-f87407c1-5dbb-41ca-acc9-36e7b98d384a.png)
